@@ -15,3 +15,12 @@ and activate
 ```bash
 micromamba activate law-example
 ```
+
+## Analysis
+In this example we want to calculate $\pi$ using Monte Carlo sampling (check [Wikipedia](https://en.wikipedia.org/wiki/Monte_Carlo_method)).
+To do this, we construct a step-by-step analysis which does the following things:
+
+1. Sample points from a unit square (Event generator)
+2. Check how many points fall into a unit circle (Detector)
+3. Calculate $\pi$
+4. Visualize the detection method
