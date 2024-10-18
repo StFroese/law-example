@@ -24,3 +24,13 @@ To do this, we construct a step-by-step analysis which does the following things
 2. Check how many points fall into a unit circle (Detector)
 3. Calculate $\pi$
 4. Visualize the detection method
+
+## The un`law`ful solution
+
+We create three python script in the `scripts` folder which we can execute after another to produce what
+we want to achieve:
+
+- scripts/events.py
+- scripts/detector.py
+- scripts/pi.py
+- scripts/plot.py
