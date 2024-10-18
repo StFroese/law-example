@@ -53,3 +53,4 @@ Let's rename the last one to something more meaningful
 ```bash
 mv my_package analysis
 ```
+(you also have to modify `law.cfg`)

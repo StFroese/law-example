@@ -1,0 +1,1 @@
+analysis.tasks:MyTask:fetch-output log-file print-deps print-output print-status remove-output
