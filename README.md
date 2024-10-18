@@ -54,3 +54,5 @@ Let's rename the last one to something more meaningful
 mv my_package analysis
 ```
 (you also have to modify `law.cfg`)
+
+Now: run `law index --verbose` to show all task that exist and `law run <some task>` to execute a task.
