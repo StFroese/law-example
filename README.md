@@ -67,4 +67,4 @@ law index
 law run PlotEventsTask
 ```
 and enjoy the result
-![](data/plot_events.pdf)
+![](data/plot_events.png)
