@@ -4,7 +4,9 @@ channels:
   - conda-forge
 dependencies:
   - python=3.13
-  - law
   - matplotlib
   - numpy
   - pandas
+  - ipython
+  - pip:
+    - git+https://github.com/riga/law.git # install law from github since we need pandas formatter

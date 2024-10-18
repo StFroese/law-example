@@ -1,1 +1,4 @@
-analysis.tasks:MyTask:fetch-output log-file print-deps print-output print-status remove-output
+analysis.tasks:GenerateEventsTask:fetch-output log-file n-points print-deps print-output print-status remove-output
+analysis.tasks:DetectEventsTask:fetch-output log-file n-points print-deps print-output print-status remove-output
+analysis.tasks:CalculatePiTask:fetch-output log-file n-points print-deps print-output print-status remove-output
+analysis.tasks:PlotEventsTask:fetch-output log-file n-points print-deps print-output print-status remove-output
