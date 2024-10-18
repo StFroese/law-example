@@ -34,3 +34,5 @@ we want to achieve:
 - scripts/detector.py
 - scripts/pi.py
 - scripts/plot.py
+
+The analysis is complete when you executed every script after another (how exhausting)
