@@ -36,3 +36,20 @@ we want to achieve:
 - scripts/plot.py
 
 The analysis is complete when you executed every script after another (how exhausting)
+
+## The `law`ful way
+Now let's enjoy the way of not having to handle the execution of all script nor the passing 
+of the files to each script by hand. 
+Create a `law` analysis with 
+```bash
+law quickstart --directory .
+```
+which generates three files:
+- setup.sh, this sets the env variables for law
+- law.cfg, everything you can configure about law
+- my_package/tasks.py, the task file which will contain the analysis
+
+Let's rename the last one to something more meaningful 
+```bash
+mv my_package analysis
+```
