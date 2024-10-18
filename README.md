@@ -58,3 +58,13 @@ mv my_package analysis
 Now: run `law index --verbose` to show all task that exist and `law run <some task>` to execute a task.
 
 The last step is to either execute the scripts with law `Tasks` or run the python code directly in the task (what is done in repo).
+
+## Final Result
+
+Run 
+```bash
+law index
+law run PlotEventsTask
+```
+and enjoy the result
+![](data/plot_events.pdf)
