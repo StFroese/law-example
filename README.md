@@ -1,5 +1,5 @@
 # law-example
-A simple example of why `law` is nice
+A simple example of why [law](http://github.com/riga/law) is nice
 
 ## Environment
 First we need a nice new python environment where we run `law`. 
