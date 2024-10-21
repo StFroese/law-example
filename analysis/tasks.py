@@ -13,6 +13,7 @@ import os
 from pathlib import Path
 
 law.contrib.load("pandas")
+law.contrib.load("docker")
 
 
 class AnalysisTask(law.Task):
@@ -48,7 +49,7 @@ class GenerateEventsTask(AnalysisTask):
         df = pd.DataFrame({"x": x, "y": y})
 
         # Save to CSV using PandasFormatter
-        self.output().dump(df, formatter="dataframe")
+        self.output().dump(df, formatter="pandas")
         print(f"Generated {self.n_points} events and saved to {self.output().path}")
 
 
@@ -74,7 +75,7 @@ class DetectEventsTask(AnalysisTask):
         df["detected"] = distances <= 1.0
 
         # Save the updated DataFrame using PandasFormatter
-        self.output().dump(df, formatter="dataframe")
+        self.output().dump(df, formatter="pandas")
         print(f"Tagged events saved to {self.output().path}")
 
 
@@ -90,7 +91,7 @@ class CalculatePiTask(AnalysisTask):
         return self.local_target("pi_estimate.txt")
 
     def run(self):
-        df = self.input().load(formatter="dataframe")
+        df = self.input().load(formatter="pandas")
 
         # Count the number of events inside the circle
         n_inside_circle = df["detected"].sum()
@@ -114,17 +115,17 @@ class PlotEventsTask(AnalysisTask):
         return DetectEventsTask(self)
 
     def output(self):
-        return self.local_target("plot_events.pdf")
+        return self.local_target("plot_events.png")
 
     def run(self):
-        df = self.input().load(formatter="dataframe")
+        df = self.input().load(formatter="pandas")
 
         # Separate points inside and outside the circle
         inside_circle = df[df["detected"]]
         outside_circle = df[~df["detected"]]
 
         # Set up the figure
-        fig, ax = plt.subplots(figsize=(8, 8))
+        fig, ax = plt.subplots(figsize=(8, 8), dpi=300)
 
         # Modern color palette using Matplotlib named colors
         inside_color = "dodgerblue"  # Modern blue
